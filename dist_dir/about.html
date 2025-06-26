@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<style>
+
+.film-gallery { /* this is the main div that wraps your gallery */
+  display:flex;
+  flex-wrap:wrap;
+  /*width:8000px;  this can be modified to make the gallery wider */
+  margin-left: 32px
+}
+.film-gallery img {
+  width:150px; /* this sets the width for every image */
+  height:200px; /* this sets the height for every image. Try setting it to 'auto' and see how it looks weird since every image has a slightly different height? */
+  object-fit:cover; /* this crops the image so they are all the same size. This might be an issue if you have landscape AND portrait images. Feel free to take this property out temporarily to see exactly what it does! */
+  
+}
+
+/* this is the div which CROPS every image */
+.film-gallery > div {
+  width:150px; /* this should match the image height */
+  height:200px; /* this should match the image width */
+  margin-right:10px; /* this controls the gaps between the images */
+  margin-bottom:10px; /* this controls the gaps between the images */
+}
+.film-gallery img:hover {
+  transform:scale(1.5); /* this scales up the image when you hover over it */
+  object-fit:contain; /* this keeps the aspect ratio of the original images*/
+}
+
+#vinyl-gallery * {
+    all: unset;
+  }
+ 
+  #vinyl-gallery {
+    all: initial!important;
+    width: 100%!important;
+    height: 230px!important;
+    margin: 30px 0!important;
+    display: flex!important;
+    flex-direction: row!important;
+    position: relative!important;
+    margin-left: 16px!important;
+  }
+ 
+  #vinyl-gallery .vinyl {
+    all:unset!important;
+    perspective: 500px !important;
+    width: 18px!important;
+    transition: width 0.5s!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover {
+    width: 148px!important;
+  }
+ 
+  #vinyl-gallery img {
+      all:unset!important;
+    transition: transform 0.5s, width 0.5s, height 0.5s, margin-top 0.5s!important;
+    width: 180px!important;
+    height: 180px!important;
+    transform: rotateX(0deg) rotateY(25deg)!important;
+    transform-style: preserve-3d!important;
+    border-radius: 4px!important;
+    border: 2px solid rgba(0, 0, 0, 0.1)!important;
+object-fit: cover!important;
+  }
+ 
+  #vinyl-gallery .vinyl:hover img {
+    transform: rotateX(0deg) rotateY(10deg)!important;
+    width: 188px!important;
+    height: 188px!important;
+    margin-top: -2px!important;
+  }
+ 
+  #vinyl-gallery .title {
+    color: black;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0px;
+    text-align: left;
+    width: 100%;
+    padding-left: 16px;
+    font-family: MS Gothic
+  }
+ 
+  #vinyl-gallery .vinyl:nth-child(n):hover + .title {
+    visibility: visible;
+    padding-left: 16px;
+  }
+</style>
+
+<html>
+  <head>
+    
+    <link rel="icon" href="favicon.ico">
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>songbird6268174 - about</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <br><br>
+    <a href="/index" class="one">b a c k</a>
+    <br><br>
+    <img src="0250306040144 (1).png" alt="pfp" width="300" height="300">
+    <br><br>
+    <h1>A B O U T</h1>
+    
+    <p>26 | 女 | programmer | gaymer | amateur internet fool</p>
+    <p>(pfp by @Zr6OV)</p>
+    <br><br>
+    <p>FAVORITE:</P>
+    <br>
+    <a href="#1">m u s i c</a>
+    <br><br>
+    <a href="#2">g a m e s</a>
+    <br><br>
+    <a href="#3">m o v i e s</a>
+    <br><br>
+    <a href="#4">b o o k s</a><br>
+    <br>
+    
+    
+    <div id="1">
+      <div id="vinyl-gallery">
+        <div class="vinyl"><img src="hozier%20-%20unaired.jpg"/></div> <div class="title">Hozier - Unaired</div>
+        <div class="vinyl"><img src="hozier%20-%20unheard.jpg"/></div> <div class="title">Hozier - Unheard</div>
+        <div class="vinyl"><img src="beach%20house%20-%20depression%20cherry.jpg"/></div> <div class="title">beach house - depression cherry</div>
+        <div class="vinyl"><img src="KXLLSWXTCH%20-%20WASTE.png"/></div> <div class="title">KXLLSWXTCH - WASTE</div>
+      </div>
+        <a href="/about" class="one">c l o s e</a>
+    </div>
+    
+    
+    <div id="2">
+      <br><br>
+      <iframe src="https://store.steampowered.com/widget/447530/" frameborder="0" width="323" height="190"></iframe>
+      <iframe src="https://store.steampowered.com/widget/1262350/" frameborder="0" width="323" height="190"></iframe>
+      <iframe src="https://store.steampowered.com/widget/1574820/" frameborder="0" width="323" height="190"></iframe>
+      <iframe src="https://store.steampowered.com/widget/746850/" frameborder="0" width="323" height="190"></iframe></p>
+      <br><br>
+      <a href="/about" class="one">c l o s e</a>
+    </div>
+    
+    <div id="3">
+      <br><br>
+      <div class="film-gallery">
+        <div><img src="BLADERUNNER.jpg" /></div>
+        <div><img src="Annihilation.jpg" /></div>
+      </div>
+      <br><br><br>
+      <a href="/about" class="one">c l o s e</a></div>
+      
+    <div id="4"><p>(books) under construction</p><a href="/about" class="one">c l o s e</a></div>
+    <style>
+      [id] {
+      	display: none;
+      }
+      [id]:target {
+        display:block;
+      }
+      /* unvisited link */
+      a:link, a:visited {
+        color: #999999;
+        text-decoration: none;
+        text-align: center;
+      }
+      /* mouse over link */
+      a:hover {
+        color: black;
+        text-decoration: none;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>
