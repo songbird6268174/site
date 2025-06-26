@@ -19,7 +19,7 @@ jobs:
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v3
         with:
-          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          api_key: ${{ secrets.NEOCITIES_API_KEY }}
           cleanup: false # does not delete files outside of site/dist_dir
           neocities_supporter: false # does not bypass unsupported files filter (need supporter account)
           dist_dir: public
