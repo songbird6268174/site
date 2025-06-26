@@ -2,20 +2,20 @@
 
 <style>
 
-.film-gallery { /* this is the main div that wraps your gallery */
+.film-gallery { /*wraps gallery */
   display:flex;
   flex-wrap:wrap;
   /*width:8000px;  this can be modified to make the gallery wider */
   margin-left: 32px
 }
 .film-gallery img {
-  width:150px; /* this sets the width for every image */
-  height:200px; /* this sets the height for every image. Try setting it to 'auto' and see how it looks weird since every image has a slightly different height? */
-  object-fit:cover; /* this crops the image so they are all the same size. This might be an issue if you have landscape AND portrait images. Feel free to take this property out temporarily to see exactly what it does! */
+  width:150px; /* sets width for every image */
+  height:200px; /* sets height for every image */
+  object-fit:cover; /* crops image so they are all the same size. This might be an issue if you have landscape AND portrait images*/
   
 }
 
-/* this is the div which CROPS every image */
+/* crops every image */
 .film-gallery > div {
   width:150px; /* this should match the image height */
   height:200px; /* this should match the image width */
@@ -30,7 +30,8 @@
 #vinyl-gallery * {
     all: unset;
   }
- 
+
+/* vinyl gallery */
   #vinyl-gallery {
     all: initial!important;
     width: 100%!important;
@@ -94,14 +95,10 @@ object-fit: cover!important;
   <head>
     
     <link rel="icon" href="favicon.ico">
-
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>songbird6268174 - about</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
@@ -126,7 +123,6 @@ object-fit: cover!important;
     <a href="#4">b o o k s</a><br>
     <br>
     
-    
     <div id="1">
       <div id="vinyl-gallery">
         <div class="vinyl"><img src="hozier%20-%20unaired.jpg"/></div> <div class="title">Hozier - Unaired</div>
@@ -136,7 +132,6 @@ object-fit: cover!important;
       </div>
         <a href="/about" class="one">c l o s e</a>
     </div>
-    
     
     <div id="2">
       <br><br>
