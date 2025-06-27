@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4 # copies repo into action runner
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v3
+        uses: bcomnes/deploy-to-neocities@v3 
         with:
           api_key: ${{ secrets.NEOCITIES_API_KEY }}
-          cleanup: false # does not delete files outside of site/dist_dir
+          cleanup: true # delete files outside of public
           neocities_supporter: false # does not bypass unsupported files filter (need supporter account)
           dist_dir: public
