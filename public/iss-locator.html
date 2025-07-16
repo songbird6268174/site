@@ -8,21 +8,21 @@
   </head>
   <body>
   <br><br>
-    <a href="/index" class="one">b a c k</a>
+    <a href="/projects" class="one">b a c k</a>
     <br><br>
-    <h1>I S S   L O C A T O R</h1>
-    <p id="demo">locating ISS</p>
+    <h1>I S S - L O C A T O R</h1>
+    <p id="location data">locating ISS</p>
     <script>
         // API
         const api_url = 'http://api.open-notify.org/iss-now.json';
-        const outputElement = document.getElementById("demo");
+        const outputElement = document.getElementById("location data");
         
         fetch(api_url)
             .then(response =>
                 {
                     if (!response.ok)
                 {
-                    throw new Error('api req failure')
+                    outputElement.innerHTML = "api request failure"
                 }
                 return response.json();
 
@@ -35,7 +35,7 @@
                 })
             .catch(error =>
                 {
-                    outputElement.innerHTML = "iss locator failure"
+                    outputElement.innerHTML = "error"
                 }
                 )
     </script>
