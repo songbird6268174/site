@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>songbird6268174 - iss-locator</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  <br><br>
+    <a href="/index" class="one">b a c k</a>
+    <br><br>
+    <h1>I S S L O C A T O R</h1>
+    
+    <script>
+        // API
+        const api_url = 'http://api.open-notify.org/iss-now.json';
+        fetch(api_url)
+            .then(response =>
+                {
+                    if (!response.ok)
+                {
+                    throw new Error('network response not ok')
+                }
+                return response.json();
+
+                })
+            .then(data =>
+                {
+                    outputElement.innerHTML = <p>data</p>
+                })
+            .catch(error =>
+                {
+                    console.error('Error:', error);
+                }
+                )
+    </script>
+  
+  </body>
+</html>
