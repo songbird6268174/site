@@ -11,7 +11,7 @@
     <a href="/index" class="one">b a c k</a>
     <br><br>
     <h1>I S S   L O C A T O R</h1>
-    <p id="demo"></p>
+    <p id="demo">locating ISS</p>
     <script>
         // API
         const api_url = 'http://api.open-notify.org/iss-now.json';
@@ -31,7 +31,7 @@
                 {
                     const lat = data.iss_position.latitude
                     const long = data.iss_position.longitude
-                    outputElement.innerHTML = "latitude: ${lat} longitude: ${long}"
+                    outputElement.innerHTML = "latitude: " + lat
                 })
             .catch(error =>
                 {
