@@ -10,28 +10,32 @@
   <br><br>
     <a href="/index" class="one">b a c k</a>
     <br><br>
-    <h1>I S S L O C A T O R</h1>
-    
+    <h1>I S S   L O C A T O R</h1>
+    <p id="demo"></p>
     <script>
         // API
         const api_url = 'http://api.open-notify.org/iss-now.json';
+        const outputElement = document.getElementById("demo");
+        
         fetch(api_url)
             .then(response =>
                 {
                     if (!response.ok)
                 {
-                    throw new Error('network response not ok')
+                    throw new Error('api req failure')
                 }
                 return response.json();
 
                 })
             .then(data =>
                 {
-                    outputElement.innerHTML = <p>data</p>
+                    const lat = data.iss_position.latitude
+                    const long = data.iss_position.longitude
+                    outputElement.innerHTML = "latitude: ${lat} longitude: ${long}"
                 })
             .catch(error =>
                 {
-                    console.error('Error:', error);
+                    outputElement.innerHTML = "iss locator failure"
                 }
                 )
     </script>
